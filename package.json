@@ -1,0 +1,45 @@
+{
+  "name": "OmarMarvel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomardavid/OmarMarvel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nomardavid/OmarMarvel/issues"
+  },
+  "homepage": "https://github.com/nomardavid/OmarMarvel#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "browserify": "^13.1.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-environments": "^0.1.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-minify": "0.0.14",
+    "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.0.0",
+    "jasmine": "^2.5.2",
+    "jshint": "^2.9.4",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.0",
+    "angular-animate": "^1.6.0",
+    "angular-aria": "^1.6.0",
+    "angular-material": "^1.1.1",
+    "angular-ui-router": "^0.3.2"
+  }
+}
