@@ -1,0 +1,56 @@
+<!-- ROW SORTS -->
+<div class="row flex-items-xs-top padding-row">
+  <div class="col-xs-6">
+
+    <!--TITLE WITH LOGO-->
+    <div class="col-xs-1">
+      <!--LOGO-->
+      <img src="/assets/characters.png" alt="characters-logo">
+    </div>
+    <!--TITLE-->
+    <div class="col-xs-11">
+      <h1>Characters</h1>
+    </div>
+
+  </div>
+  <!--SORT DROP DOWN-->
+  <div class="col-xs-6">
+    <div class="dropdown">
+      <button 
+      class="btn btn-secondary dropdown-toggle" 
+      type="button" 
+      id="dropdownMenuButton" 
+      data-toggle="dropdown" 
+      aria-haspopup="true" 
+      aria-expanded="false">
+        Sort by
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Sort by name</a>
+        <a class="dropdown-item" href="#">Sort by modified</a>
+        <a class="dropdown-item" href="#">Sort by rate</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ROW CHARACTERS -->
+<div class="row flex-items-xs-middle padding-row">
+  <div class="col-xs-10">
+    <!-- CHARACTERS COLUMN -->
+    <div class="col-xs-12 col-sm-6" *ngFor="let character of characters">
+      {{character}}
+    </div>
+  </div>
+  <!-- FAVORITES COLUMN -->
+  <div class="col-xs-2">
+    <!-- TODO: ADD FAVORITES COMPONENT -->
+    <h1>FAVORITES</h1>
+  </div>
+</div>
+
+<div class="row flex-items-xs-bottom padding-row">
+  TEST3
+</div>
+
+

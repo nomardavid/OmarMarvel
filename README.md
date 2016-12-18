@@ -1,50 +1,31 @@
-# Omar Garcia Marvel Test 
-This application consumes the Marvel API showing the comics of each character that is written in the search engine.
+# OmarMarvel
 
-## Table of Contents
-1. [Features](#features)
-1. [Requirements](#requirements)
-1. [Getting Started](#getting-started)
-1. [Development](#development)
-  1. [Developer Tools](#developer-tools)
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.21.
 
-## Features
-* [angularjs1.6](https://github.com/angular/angular.js)
-* [angular-animate](https://www.npmjs.com/package/angular-animate)
-* [angular-ui-router](https://github.com/angular-ui/ui-router)
-* [angular-aria](https://docs.angularjs.org/api/ngAria)
-* [angular-material](https://material.angularjs.org/latest/)
-* [karma](https://github.com/karma-runner/karma)
-* [jasmine](https://github.com/jasmine/jasmine-npm)
-* [gulp](https://github.com/gulpjs/gulp)
-* [browserify](https://github.com/substack/node-browserify#usage)
-* [browser-sync](https://browsersync.io/)
+## Development server
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Code scaffolding
 
-## Requirements
-* node `^4.5.0`
-* yarn `^0.17.0` or npm `^3.0.0`
-* gulp `^3.9.0` ( `npm install -g gulp`)
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
 
-## Getting Started
+## Build
 
-After confirming that your development environment meets the specified [requirements](#requirements), you can create a new project based on `omar-marvel` by doing the following:
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-### Install from source
+## Running unit tests
 
-First, clone the project:
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-```bash
-$ git clone https://github.com/nomardavid/OmarMarvel
-$ cd OmarMarvel
-$ npm install
-$ gulp
-```
-## Development
+## Running end-to-end tests
 
-#### Developer Tools
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
 
-**I recommend using the [AngularJs Batarang](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk).**
-Using the chrome extension allows your monitors to run on a separate thread and affords better performance and functionality.
+## Deploying to Github Pages
 
-https://github.com/angular/batarang
+Run `ng github-pages:deploy` to deploy to Github Pages.
+
+## Further help
+
+To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
