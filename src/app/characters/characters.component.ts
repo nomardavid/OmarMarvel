@@ -49,7 +49,22 @@ export class CharactersComponent implements OnInit {
     this.getCharacters();
   }
 
-  // clickHero(character) {
-  //       this.router.navigate(['/character'], character.id);
-  //   }
+  getTotalPages() {
+    if (this.characters) {
+      return Math.ceil(this.characters.data.total / this.perPage);
+    }
+  }
+
+  onChangePage(newPage) {
+    this.router.navigate([{
+      p: newPage,
+      q: this.query
+    }]);
+  }
+
+  onSearch(query) {
+    this.router.navigate([query ? {q: query} : {} ]);
+  }
+
+
 }

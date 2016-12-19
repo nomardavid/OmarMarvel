@@ -12,7 +12,7 @@
         <h4>{{character.name || character.fullName || character.title}}</h4>
         <div [ngSwitch]="character.description">
           <div *ngSwitchCase="''">
-            <p class="description">Sorry but this character dont have a description. It's Marvel fault :/ </p>
+            <p class="description">Sorry but this character dont have a description. It's Marvel's' fault :/ </p>
             </div>
           <div *ngSwitchDefault>
             <p class="description">{{character.description}}</p>

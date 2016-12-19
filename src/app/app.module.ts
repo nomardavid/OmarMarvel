@@ -4,23 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routes } from './app.routing';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { CharactersComponent } from './characters/characters.component';
 import { ComicsComponent } from './comics/comics.component';
 import { CharactersService } from './services';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { CharacterThumbnailComponent } from './character-thumbnail/character-thumbnail.component';
+import { PaginatorComponent } from './paginator/paginator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     FavoritesComponent,
     CharactersComponent,
     ComicsComponent,
     CharacterDetailsComponent,
-    CharacterThumbnailComponent
+    CharacterThumbnailComponent,
+    PaginatorComponent
   ],
   imports: [
     BrowserModule,
