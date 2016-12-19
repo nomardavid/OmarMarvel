@@ -1,28 +1,55 @@
 import { Component, OnInit } from '@angular/core';
-import { MarvelService } from '../service-marvel.service';
+import { MarvelService } from '../services/service-marvel.service';
+import { CharactersService } from '../services/character.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-characters',
   templateUrl: './characters.component.html',
   styleUrls: ['./characters.component.sass'],
-  providers: [MarvelService]
+  providers: [
+    {provide: MarvelService, useClass: CharactersService }
+  ]
 })
 
 export class CharactersComponent implements OnInit {
 
   title: string;
   getData: string;
-  characters: Array<Object> = [];
+  characters: any;
+  query: string = '';
+  page: number = 1;
+  perPage: number = 10;
 
-  constructor(private marvelService: MarvelService) { }
+  constructor(
+    private marvelService: MarvelService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) { }
+
+  getCharacters() {
+    this.activatedRoute.params
+      .do( (params) => {
+        this.page = params['p'] ? parseInt(params['p'], 10) : 1;
+        this.query = params['q'] || '';
+      })
+      .switchMap( () => {
+        return this.marvelService.getCharacters({
+          page: this.page,
+          perPage: this.perPage,
+          query: this.query
+        });
+      })
+      .subscribe ( (characters) => {
+        this.characters = characters;
+      });
+  }
 
   ngOnInit() {
-    this.marvelService.getCharacters()
-      .subscribe(
-      (data: Array<Object>) => this.characters = data,
-        onerror => console.log(onerror),
-        () => console.log("finished character request")
-      );
-      console.log(this.characters);
+    this.getCharacters();
   }
+
+  // clickHero(character) {
+  //       this.router.navigate(['/character'], character.id);
+  //   }
 }

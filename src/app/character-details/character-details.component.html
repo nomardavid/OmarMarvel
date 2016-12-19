@@ -1,0 +1,11 @@
+<div  class="row padding-row">
+  <div class="container white-bg">
+    
+    <app-character-thumbnail
+    *ngIf="character.thumbnail"
+    [image]="character.thumbnail"
+    alt="Thumbail of {{character.name}}"></app-character-thumbnail>
+    <h3>{{character.name || character.fullName || character.title}}</h3>
+    <button type="button" class="btn btn-danger">Danger</button>
+  </div>
+</div>
