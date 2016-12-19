@@ -1,0 +1,21 @@
+@import '../../styles.sass'
+
+$description-font-size: 13px
+$description-line-height: 1.4
+$description-lines: 6
+
+.height-row 
+    height: 20rem
+
+.description
+    color: $grayText
+    font-size: $description-font-size
+    height: $description-font-size*$description-line-height*$description-lines
+    margin-bottom: 0 auto
+    line-height: $description-line-height
+    display: block
+    display: -webkit-box
+    -webkit-line-clamp: $description-lines
+    -webkit-box-orient: vertical
+    overflow: hidden
+    text-overflow: ellipsis
