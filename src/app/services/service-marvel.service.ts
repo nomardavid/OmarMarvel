@@ -9,11 +9,9 @@ export interface ListOptions {
 }
 
 export abstract class MarvelService {
-  // private url: string = 'https://gateway.marvel.com/v1/public';
   private apiKey: string = '3fd03d210850e82f3c329d7c477b0d3a';
   private timeSmap: string = '1';
   private hashMD5: string = '145232db20b95681ca4a26f167b7fcda';
-  private limitCharacters: number = 10;
   abstract paramsName;
   abstract url;
 
@@ -21,6 +19,14 @@ export abstract class MarvelService {
 
   constructor( private http: Http ) { }
 
+  get(id) {
+    return this.http
+      .get(this.url + '/' + id, {
+        search: this.getOneCharacter()
+      })
+      .map(responce => responce.json())
+      .map(body => body.data.results[0]);
+  }
 
   getCharacters(options: ListOptions) {
       return this.http
@@ -47,6 +53,13 @@ export abstract class MarvelService {
     let baseParams = new URLSearchParams();
     baseParams.set('apikey', this.apiKey);
     return baseParams;
+  }
+
+  private getOneCharacter() {
+    let urlParams = this.getBasicParams();
+    urlParams.set('ts', this.timeSmap);
+    urlParams.set('hash', this.hashMD5);
+    return urlParams;
   }
 
 }

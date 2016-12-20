@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { routes } from './app.routing';
+import { routes, appRoutingProviders } from './app.routing';
 import { AppComponent } from './app.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { CharactersComponent } from './characters/characters.component';
@@ -11,6 +11,9 @@ import { CharactersService } from './services';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { CharacterThumbnailComponent } from './character-thumbnail/character-thumbnail.component';
 import { PaginatorComponent } from './paginator/paginator.component';
+import { FourFilterPipe } from './pipes/four-filter.pipe';
+import { ModalComicsComponent } from './modal-comics/modal-comics.component';
+import { CharacterIdComponent } from './character-id/character-id.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { PaginatorComponent } from './paginator/paginator.component';
     ComicsComponent,
     CharacterDetailsComponent,
     CharacterThumbnailComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    FourFilterPipe,
+    ModalComicsComponent,
+    CharacterIdComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,10 @@ import { PaginatorComponent } from './paginator/paginator.component';
     HttpModule,
     routes
   ],
-  providers: [ CharactersService ],
+  providers: [
+    CharactersService,
+    appRoutingProviders
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

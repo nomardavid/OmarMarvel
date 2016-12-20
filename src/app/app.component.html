@@ -1,5 +1,20 @@
 <!--BODY ( CHARACTERS, FAVORITES ) -->
-<div class="container-fluid gray-bg padding-body">
+<!--HEADER-->
+<nav class="navbar navbar-full navbar-light bg-faded nav-marvel">
+  <a class="navbar-brand col-xs-2">
+    <img src="/assets/logo.png"  alt="logo-marvel" class="logo-marvel">
+  </a>
+  <form (submit)="onSearch(searchInput.value)" class="form-inline col-xs-6  offset-xs-1  center-nav padding">
+    <div class="input-group full-width">
+      <input type="text" 
+      class="form-control input-search"
+      placeholder="Search character..." 
+      aria-describedby="basic-addon1" 
+      #searchInput [value]="query">
+    </div>
+  </form>
+</nav>
+<div class="container-fluid gray-bg ">
   <router-outlet></router-outlet>
 </div>
 

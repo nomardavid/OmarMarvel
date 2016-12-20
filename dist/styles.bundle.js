@@ -1,6 +1,6 @@
 webpackJsonp([2,3],{
 
-/***/ 387:
+/***/ 390:
 /***/ function(module, exports) {
 
 /*
@@ -57,7 +57,7 @@ module.exports = function() {
 
 /***/ },
 
-/***/ 412:
+/***/ 415:
 /***/ function(module, exports) {
 
 /*
@@ -310,16 +310,16 @@ function updateLink(linkElement, obj) {
 
 /***/ },
 
-/***/ 418:
+/***/ 422:
 /***/ function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(683);
+var content = __webpack_require__(690);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(412)(content, {});
+var update = __webpack_require__(415)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -337,16 +337,16 @@ if(false) {
 
 /***/ },
 
-/***/ 419:
+/***/ 423:
 /***/ function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(684);
+var content = __webpack_require__(691);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(412)(content, {});
+var update = __webpack_require__(415)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -364,10 +364,10 @@ if(false) {
 
 /***/ },
 
-/***/ 683:
+/***/ 690:
 /***/ function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(387)();
+exports = module.exports = __webpack_require__(390)();
 // imports
 
 
@@ -379,29 +379,29 @@ exports.push([module.i, "/*!\n * Bootstrap v4.0.0-alpha.5 (https://getbootstrap.
 
 /***/ },
 
-/***/ 684:
+/***/ 691:
 /***/ function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(387)();
+exports = module.exports = __webpack_require__(390)();
 // imports
 
 
 // module
-exports.push([module.i, "/* global styles */\n.gray-bg {\n  background-color: #f4f4f4; }\n\n.white-bg {\n  background-color: #ffffff; }\n\n.padding-row {\n  padding: 10px; }\n\n.margin-10 {\n  margin: 10px; }\n", ""]);
+exports.push([module.i, "/* global styles */\n.gray-bg {\n  background-color: #f4f4f4; }\n\n.white-bg {\n  background-color: #ffffff; }\n\n.margin-10 {\n  margin: 10px; }\n\n.padding-row {\n  padding: 20px; }\n\n.no-pp-l {\n  padding-left: 0 !important; }\n\n.absolute {\n  position: absolute; }\n\n.relative {\n  position: relative; }\n\n.text-center {\n  text-align: center; }\n\n.no-padding {\n  padding: 0; }\n", ""]);
 
 // exports
 
 
 /***/ },
 
-/***/ 972:
+/***/ 988:
 /***/ function(module, exports, __webpack_require__) {
 
-__webpack_require__(418);
-module.exports = __webpack_require__(419);
+__webpack_require__(422);
+module.exports = __webpack_require__(423);
 
 
 /***/ }
 
-},[972]);
+},[988]);
 //# sourceMappingURL=styles.bundle.map

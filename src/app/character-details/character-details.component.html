@@ -1,15 +1,15 @@
 <div  class="container padding-row no-pp-l">
   <div class="row white-bg relative height-row">
-    
-    
     <div class="col-xs-4">
       <app-character-thumbnail
       *ngIf="character.thumbnail"
       [image]="character.thumbnail"
       alt="Thumbail of {{character.name}}"></app-character-thumbnail>
     </div>
-    <div class="col-xs-8">
-        <h4>{{character.name || character.fullName || character.title}}</h4>
+    <div class="col-xs-8 padding-10">
+
+        <h4 class="character-name">{{character.name || character.fullName || character.title}}</h4>
+
         <div [ngSwitch]="character.description">
           <div *ngSwitchCase="''">
             <p class="description">Sorry but this character dont have a description. It's Marvel's' fault :/ </p>
@@ -18,9 +18,27 @@
             <p class="description">{{character.description}}</p>
           </div>
         </div>
-        <button type="button" class="btn btn-danger">View More</button>
+
+        <button 
+        type="button" 
+        class="btn btn-view-more"
+        [routerLink]="['/characters', character.id ]">
+          View Comics
+        </button>
     </div>
-    
-    
+
+    <div class="col-xs-12" *ngIf="character.comics">
+      <div *ngIf="character.comics.available === 0">
+        <h5 class="no-available" >No comics available</h5>
+      </div>
+      <div *ngIf="character.comics.available > 0">
+        <h5 class="related-title" >Related comics</h5>
+        <div *ngFor="let comics of (character.comics.items | slice:character.comics.items.length - 4 )">
+          <div class="col-xs-6">
+              <p class="comic-name">{{comics.name}}</p>
+          </div>
+        </div>
+      </div>
+      </div>
   </div>
 </div>
