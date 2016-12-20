@@ -1,0 +1,52 @@
+<!--BODY ( CHARACTERS, FAVORITES ) -->
+<div class="app">
+  <!--HEADER-->
+<nav class="navbar navbar-full navbar-light bg-faded nav-marvel">
+  <a class="navbar-brand col-xs-2" [routerLink]="['characters']">
+    <img src="/assets/logo.png"  alt="logo-marvel" class="logo-marvel">
+  </a>
+  <form (submit)="onSearch(searchInput.value)" class="form-inline col-xs-6  offset-xs-1  center-nav padding">
+    <div class="input-group full-width">
+      <input type="text" 
+      class="form-control input-search"
+      placeholder="Search character..." 
+      aria-describedby="basic-addon1" 
+      #searchInput [value]="query">
+    </div>
+  </form>
+</nav>
+
+  <div class="entry">
+    <div class="col-xs-9">
+      <div class="container-fluid gray-bg container-entry">
+        <router-outlet>
+          <!-- app-characters [characters]="characters"></app-characters -->
+        </router-outlet>
+      </div>
+    </div>
+
+    <!-- FAVORITES COLUMN -->
+    <div class="col-xs-3 ">
+      <!-- TODO: ADD FAVORITES COMPONENT -->
+      <h1>FAVORITES</h1>
+    </div>
+  </div>
+
+  <footer>
+    <div class="copy col-xs-6">
+      Made by Omar Garcia  © 2016 
+    </div>
+    <div class="logo-div col-xs-6">
+      <a href="http://www.grability.com/" target="_blank">
+        <img src="/assets/grability-logo.png"  alt="logo-grability">
+      </a>
+      <a href="https://github.com/nomardavid/OmarMarvel" target="_blank">
+        <i class="fa fa-github github-omar" aria-hidden="true"></i>
+      </a>
+    </div>
+  </footer>
+</div>
+
+
+
+

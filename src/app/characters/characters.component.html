@@ -1,0 +1,42 @@
+
+<div class="row flex-items-xs-top padding-row">
+  <div class="col-xs-6">
+
+    <!--TITLE WITH LOGO-->
+    <div class="col-xs-1">
+      <!--LOGO-->
+      <img src="/assets/characters.png" alt="characters-logo">
+    </div>
+    <!--TITLE-->
+    <div class="col-xs-11">
+      <h1>Characters</h1>
+    </div>
+
+  </div>
+  <!-- TODO: SORT DROP DOWN-->
+  <div class="col-xs-6">
+  </div>
+</div>
+
+<!-- ROW CHARACTERS -->
+<div class="row padding-row">
+  <div *ngIf="characters" class="col-xs-12" >
+    <!-- CHARACTERS-DETAIL COLUMN -->
+    <app-character-details
+    *ngFor="let character of characters.data.results"
+    [character]="character"
+    class="col-xs-12 col-sm-6">
+    </app-character-details>
+  </div>
+
+  <div class="col-xs-12 padding-row">
+    <app-paginator
+    *ngIf="getTotalPages()"
+    [currentPage]="page"
+    [totalPages]="getTotalPages()"
+    (change)="onChangePage($event)">
+    </app-paginator>
+  </div>
+</div>
+
+

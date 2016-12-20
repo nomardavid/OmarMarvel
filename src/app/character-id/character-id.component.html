@@ -1,0 +1,34 @@
+
+<div  class="col-xs-12"*ngFor="let comic of comics" >
+    <div class="container padding-row no-pp-l padding-b-0  margin-10" >
+        <div class="row white-bg relative height-row-comic " >
+            
+            <div class="col-xs-4">
+            <app-comic-thumbnail
+                *ngIf="comic.thumbnail"
+                [image]="comic.thumbnail"
+                alt="Thumbail of {{comic.title}}">
+            </app-comic-thumbnail>
+
+            </div>
+            <div class="col-xs-8 padding-10">
+
+                <h4 class="character-name text-center">{{comic.title}}</h4>
+
+                <div>
+                    <p class="description">{{comic.description}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center row-buttons">
+             <div class="col-xs-6 text-center add-div add-bg">
+                 <h4 class="margin-10 favorite-add">ADD TO FAVORITES</h4>
+            </div>
+
+            <div class="col-xs-6 text-center buy-div buy-bg" >
+                <img src="/assets/shopping-cart-primary.png" alt="shopping-primary">
+                <h4 class="margin-10 buy-text">BUY FOR ${{comic.prices[0].price}}</h4>
+            </div>
+        </div>
+    </div>
+</div>
