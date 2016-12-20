@@ -20,19 +20,14 @@
 </div>
 
 <!-- ROW CHARACTERS -->
-<div class="row flex-items-xs-middle padding-row">
-  <div *ngIf="characters" class="col-xs-9" >
+<div class="row padding-row">
+  <div *ngIf="characters" class="col-xs-12" >
     <!-- CHARACTERS-DETAIL COLUMN -->
     <app-character-details
     *ngFor="let character of characters.data.results"
     [character]="character"
     class="col-xs-12 col-sm-6">
     </app-character-details>
-  </div>
-  <!-- FAVORITES COLUMN -->
-  <div class="col-xs-3">
-    <!-- TODO: ADD FAVORITES COMPONENT -->
-    <h1>FAVORITES</h1>
   </div>
 
   <div class="col-xs-9 padding-row">

@@ -11,7 +11,6 @@ import { CharactersService } from './services';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { CharacterThumbnailComponent } from './character-thumbnail/character-thumbnail.component';
 import { PaginatorComponent } from './paginator/paginator.component';
-import { FourFilterPipe } from './pipes/four-filter.pipe';
 import { ModalComicsComponent } from './modal-comics/modal-comics.component';
 import { CharacterIdComponent } from './character-id/character-id.component';
 
@@ -24,7 +23,6 @@ import { CharacterIdComponent } from './character-id/character-id.component';
     CharacterDetailsComponent,
     CharacterThumbnailComponent,
     PaginatorComponent,
-    FourFilterPipe,
     ModalComicsComponent,
     CharacterIdComponent
   ],

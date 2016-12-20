@@ -21,11 +21,11 @@ export abstract class MarvelService {
 
   get(id) {
     return this.http
-      .get(this.url + '/' + id, {
+      .get(this.url + '/' + id + '/comics', {
         search: this.getOneCharacter()
       })
       .map(responce => responce.json())
-      .map(body => body.data.results[0]);
+      .map(body => body.data.results);
   }
 
   getCharacters(options: ListOptions) {
