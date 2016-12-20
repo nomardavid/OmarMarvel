@@ -8,16 +8,19 @@ import { CharactersService } from '../services/character.service';
   styleUrls: ['./character-id.component.sass']
 })
 export class CharacterIdComponent implements OnInit {
-  character: any;
-  constructor(private route: ActivatedRoute, private charactersService: CharactersService) { }
+  comics: any;
+  constructor (
+    private route: ActivatedRoute,
+    private charactersService: CharactersService
+  ) {}
 
   ngOnInit() {
     this.route.params
       .map((params) => params['id'])
       .switchMap((characterId) => this.charactersService.get(characterId))
-      .subscribe((character) => {
-        this.character = character;
-        console.log(character);
+      .subscribe((comics) => {
+        this.comics = comics;
+        console.log(comics);
       });
   }
 }

@@ -13,6 +13,7 @@ import { CharacterThumbnailComponent } from './character-thumbnail/character-thu
 import { PaginatorComponent } from './paginator/paginator.component';
 import { ModalComicsComponent } from './modal-comics/modal-comics.component';
 import { CharacterIdComponent } from './character-id/character-id.component';
+import { ComicThumbnailComponent } from './comic-thumbnail/comic-thumbnail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CharacterIdComponent } from './character-id/character-id.component';
     CharacterThumbnailComponent,
     PaginatorComponent,
     ModalComicsComponent,
-    CharacterIdComponent
+    CharacterIdComponent,
+    ComicThumbnailComponent
   ],
   imports: [
     BrowserModule,
