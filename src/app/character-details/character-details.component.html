@@ -20,12 +20,14 @@
           </div>
         </div>
 
-        <button 
-        type="button" 
-        class="btn btn-view-more"
-        [routerLink]="['/characters', character.id]">
-          View Comics
-        </button>
+        <div *ngIf="character.comics.available > 0">
+          <button 
+          type="button" 
+          class="btn btn-view-more"
+          [routerLink]="['/characters', character.id]">
+            View Comics
+          </button>
+        </div>
     </div>
 
     <div class="col-xs-12" *ngIf="character.comics">

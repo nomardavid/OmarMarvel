@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { CharactersService } from '../services/character.service';
 
 @Component({
@@ -9,9 +9,12 @@ import { CharactersService } from '../services/character.service';
 })
 export class CharacterIdComponent implements OnInit {
   comics: any;
+  page: number = 1;
+  perPage: number = 10;
   constructor (
     private route: ActivatedRoute,
-    private charactersService: CharactersService
+    private charactersService: CharactersService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -20,7 +23,8 @@ export class CharacterIdComponent implements OnInit {
       .switchMap((characterId) => this.charactersService.get(characterId))
       .subscribe((comics) => {
         this.comics = comics;
-        console.log(comics);
       });
   }
+
+
 }

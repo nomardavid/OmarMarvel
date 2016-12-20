@@ -13,3 +13,38 @@ $description-font-size: 15px
     text-overflow: ellipsis
     text-align: justify
     padding: 5px
+
+.row-buttons
+    div
+        padding: 20px
+        box-shadow: 1px 1px 15px $grayText
+        display: flex
+        align-items: center
+        cursor: pointer
+        
+.add-div
+    &:hover
+        background: $addBgHover
+        color: $redMarvel
+        .favorite-add
+            background-image: url(./assets/btn-favourites-primary.png)
+    &:focus
+        color: $redMarvel
+        background: $addBgHover
+
+.buy-div
+    padding-left: 12% !important
+    color: $redMarvel
+    font-style: bold
+
+
+.favorite-add
+    background-image: url(./assets/btn-favourites-default.png)
+    background-repeat: no-repeat
+    padding-left: 20%
+    background-size: 42px
+    background-position: 36px
+    line-height: 1.8
+
+.buy-text
+    line-height: 1.8
