@@ -1,22 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MarvelService } from '../services/service-marvel.service';
-import { CharactersService } from '../services/character.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-characters',
   templateUrl: './characters.component.html',
   styleUrls: ['./characters.component.sass'],
-  providers: [
-    {provide: MarvelService, useClass: CharactersService }
-  ]
 })
 
 export class CharactersComponent implements OnInit {
-
-  title: string;
-  getData: string;
-  characters: any;
+  @Input() characters: any;
   query: string = '';
   page: number = 1;
   perPage: number = 10;

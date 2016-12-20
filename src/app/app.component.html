@@ -1,7 +1,7 @@
 <!--BODY ( CHARACTERS, FAVORITES ) -->
 <!--HEADER-->
 <nav class="navbar navbar-full navbar-light bg-faded nav-marvel">
-  <a class="navbar-brand col-xs-2">
+  <a class="navbar-brand col-xs-2" [routerLink]="['characters']">
     <img src="/assets/logo.png"  alt="logo-marvel" class="logo-marvel">
   </a>
   <form (submit)="onSearch(searchInput.value)" class="form-inline col-xs-6  offset-xs-1  center-nav padding">
@@ -15,7 +15,9 @@
   </form>
 </nav>
 <div class="container-fluid gray-bg ">
-  <router-outlet></router-outlet>
+  <router-outlet>
+    <!-- app-characters [characters]="characters"></app-characters -->
+  </router-outlet>
 </div>
 
 <!--BOTTOM-->
