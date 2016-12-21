@@ -3,10 +3,10 @@
 
 For run this project need install first `node`(https://nodejs.org/en/download/)
 after use
-1. `npm instal -g angular-cli`
-1. `git clone https://github.com/nomardavid/OmarMarvel`
-1. `cd Project && npm install`
-1. `ng serve`
+* `npm instal -g angular-cli`
+* `git clone https://github.com/nomardavid/OmarMarvel`
+* `cd Project && npm install`
+* `ng serve`
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
